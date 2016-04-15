@@ -1,0 +1,12 @@
+<h1> Posts </h1> 
+
+<table> 
+	<tr> <th> <strong> Post: </strong> </th> </tr>
+	<th> <strong> Text: </strong> </th>  
+	<tr> 
+		<%= @posts.each do |post| %>
+		<td> <%= @post.title %> </td> 
+		<td> <%= @post.text %> </td>
+	</tr>
+	<% end %>  
+</table> 
