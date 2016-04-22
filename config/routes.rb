@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :posts do 
+    resources :comments 
+  end 
+
+  resources :users do 
+    resources :messages 
+  end 
+
+  resources :messages, only: [:create, :new, :show]
+
   get 'posts/new'
 
   get 'posts/index'

@@ -1,0 +1,39 @@
+<% url = request.path_info  %>
+<% current_user_id = url[7].to_i %> 
+<% if url.include?('users') %> 
+	<h1> Your Messages </h1> 
+	<table> 
+		<tr> 
+<th> Title: </th> 
+<th> Text: </th>  
+</tr> 
+		<% @messages.each do |message| %> 
+		<% if message.user_id == current_user_id %>
+	<tr>
+		<td> <strong> <%= message.title %> | </strong> </td>
+
+		<td> <%= message.body %> </td> 
+	</tr>
+	<% end %> 
+	<% end %> 
+
+</table> 
+<%= link_to 'Posts', posts_path %> 
+
+<% else %> 
+
+<h1> All Messages </h1> 
+<table>
+	<tr> 
+<th> Title: </th> 
+<th> Text: </th>  
+</tr> 
+		<% @messages.each do |message| %>
+	<tr>
+		<td> <strong> <%= message.title %> | </strong> </td>
+
+		<td> <%= message.body %> </td> 
+	</tr>
+	<% end %> 
+	<% end %> 
+</table> 

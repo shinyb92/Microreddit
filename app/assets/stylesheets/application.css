@@ -16,4 +16,16 @@
 
  body{
  	font-family: 'Courier New';
+ 	background: url(https://goo.gl/3j0xjZ
+);
+ 	background-position: center right;
+ 	background-repeat: no-repeat;
  }
+
+ h1{
+ 	text-align: center;
+ 	margin-bottom: 10px;
+ 	padding: 10px;
+ }
+
+
